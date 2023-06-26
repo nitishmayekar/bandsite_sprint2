@@ -1,0 +1,406 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+}
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: "Avenir";
+}
+
+.header__logo--bio {
+  text-decoration: none;
+}
+
+.header__logo--shows {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #323232;
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (min-width: 820px) {
+  .header {
+    flex-direction: row;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .header {
+    flex-direction: row;
+  }
+}
+.header__logo {
+  height: 1.5rem;
+  justify-content: center;
+  padding-left: 7rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 820px) {
+  .header__logo {
+    padding-left: 3rem;
+    height: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .header__logo {
+    height: 1.5rem;
+  }
+}
+.header--sub {
+  display: flex;
+}
+
+.header__logo--sub {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 1.5rem;
+}
+@media only screen and (min-width: 820px) {
+  .header__logo--sub {
+    font-size: larger;
+    padding-left: 3rem;
+    padding-top: 2rem;
+  }
+}
+
+.header__logo--bio {
+  height: 0.5rem;
+  color: #FFFFFF;
+}
+@media only screen and (min-width: 820px) {
+  .header__logo--bio {
+    padding-right: 3rem;
+  }
+}
+
+.header__logo--shows {
+  height: 0.5rem;
+  color: #FFFFFF;
+}
+
+.heroimage {
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.1)), url(../Assets/Images/hero-shows.jpg);
+  min-height: 50vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+@media only screen and (min-width: 1180px) {
+  .heroimage {
+    flex-direction: row;
+  }
+}
+.heroimage__head {
+  color: #FFFFFF;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+@media only screen and (min-width: 820px) {
+  .heroimage__head {
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .heroimage__head {
+    margin-right: 0%;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .heroimage__box {
+    margin-right: 0;
+    width: 50%;
+  }
+}
+.heroimage__text {
+  color: #FFFFFF;
+  font-size: 1.7rem;
+  font-weight: 700;
+  padding-left: 1rem;
+}
+@media only screen and (min-width: 820px) {
+  .heroimage__text {
+    font-size: 4rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .heroimage__text {
+    width: 70%;
+    margin-right: 0%;
+    font-size: 3rem;
+  }
+}
+.heroimage iframe {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  border-radius: 2rem;
+}
+@media only screen and (min-width: 820px) {
+  .heroimage iframe {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .heroimage iframe {
+    width: 100%;
+    align-items: center;
+    padding-top: 4rem;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 0 1.5rem;
+}
+@media only screen and (min-width: 820px) {
+  .footer {
+    padding-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .footer {
+    padding-left: 6rem;
+  }
+}
+.footer__logos {
+  list-style: none;
+  display: flex;
+  padding-left: 0%;
+}
+@media only screen and (min-width: 820px) {
+  .footer__logos {
+    padding-left: 1.5rem;
+    padding-top: 0.5rem;
+  }
+}
+.footer_img {
+  padding-right: 1.5rem;
+  height: 1.5rem;
+}
+
+@media only screen and (min-width: 820px) {
+  .footer__heading {
+    display: flex;
+  }
+}
+
+.contactinfo {
+  padding-bottom: 2rem;
+}
+.contactinfo__contact {
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 820px) {
+  .contactinfo__contact {
+    padding-right: 1rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .contactinfo__contact {
+    padding-right: 3rem;
+  }
+}
+@media only screen and (min-width: 820px) {
+  .contactinfo {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.contactinfo__email {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.contactinfo__name {
+  margin-bottom: 0%;
+}
+
+.contactinfo__tite {
+  margin-top: 0%;
+}
+
+.contactinfo__add {
+  margin-bottom: 0%;
+}
+
+.contactinfo__add2 {
+  margin-top: 0%;
+}
+
+.contactinfo__ad {
+  margin-top: 0%;
+}
+
+.footerlogo {
+  height: 2.5rem;
+  width: 7rem;
+}
+@media only screen and (min-width: 820px) {
+  .footerlogo {
+    display: flex;
+    order: -1;
+    justify-content: flex-end;
+    justify-content: right;
+    align-self: flex-end;
+    padding-top: 1rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .footerlogo {
+    padding-right: 8rem;
+    height: 4rem;
+    width: 9rem;
+  }
+}
+
+@media screen and (max-width: 819px) {
+  tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1rem;
+  }
+  th {
+    text-align: left;
+    margin-bottom: 0.1rem;
+    color: rgba(32, 5, 5, 0.337254902);
+  }
+  .buy-ticket-button {
+    width: 100%;
+  }
+  .concerts-table {
+    width: 100%;
+    margin-right: 0%;
+  }
+  .shows {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .buy-ticket-button {
+    background-color: #323232;
+    color: #FFFFFF;
+    width: 100%;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 550;
+    margin-top: 1rem;
+  }
+  .concert-date {
+    color: #000000;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .concert-venue {
+    margin-bottom: 0.5rem;
+  }
+  .concert-location {
+    margin-bottom: 0.5rem;
+  }
+}
+@media only screen and (min-width: 820px) {
+  .shows__header {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .shows {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+@media only screen and (min-width: 1180px) {
+  .shows {
+    display: flex;
+    justify-content: space-around;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .concerts-table {
+    width: 100%;
+    margin-right: 0%;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  th {
+    text-align: left;
+    margin-bottom: 3rem;
+    color: rgba(32, 5, 5, 0.337254902);
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  tr td {
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .buy-ticket-button {
+    background-color: #323232;
+    color: #FFFFFF;
+    width: 10rem;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .concert-date {
+    color: #000000;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .concert-venue {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  .concert-location {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1180px) {
+  #concerts-container {
+    width: 60%;
+    padding-top: 2rem;
+  }
+}/*# sourceMappingURL=shows.css.map */

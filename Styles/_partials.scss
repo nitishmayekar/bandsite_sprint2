@@ -1,0 +1,22 @@
+$primary-color: #323232;
+$white-color1: #FFFFFF;
+$font-color2: #000000;
+
+
+@mixin tablet {
+@media only screen and (min-width: 820px) {
+@content;
+}
+  }
+
+
+@mixin desktop {
+@media only screen and (min-width: 1180px) {
+@content;
+}
+}
+
+@font-face {
+    font-family: 'Avenir';
+    src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+}

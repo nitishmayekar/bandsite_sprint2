@@ -1,0 +1,447 @@
+@import 'partials';
+
+
+body {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Avenir';
+}
+
+
+// Header Section
+.header__logo--bio {
+    text-decoration: none;
+}
+
+.header__logo--shows {
+    text-decoration: none;
+}
+
+.header {
+    background-color: $primary-color;
+    display: flex;
+   flex-direction: column;
+
+@include tablet {
+  flex-direction: row;
+}
+
+@include desktop {
+    flex-direction: row;
+   
+}
+
+
+&__logo {
+    height: 1.5rem;
+
+    justify-content: center;
+   padding-left: 7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+@include tablet {
+    padding-left: 3rem;
+    height: 1.5rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@include desktop {
+    height: 1.5rem;
+}
+
+}
+
+&--sub {
+    display: flex;
+}
+}
+
+.header__logo--sub {
+    display: flex;
+    justify-content: space-evenly;
+  padding-bottom: 1.5rem;
+
+@include tablet {
+    font-size: larger;
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+
+}
+
+.header__logo--bio {
+height: 0.5rem;
+color: $white-color1;
+
+@include tablet {
+    padding-right: 3rem;
+}
+
+
+}
+
+.header__logo--shows {
+    height: 0.5rem;
+    color: $white-color1; 
+}
+
+
+
+// Hero Image 
+
+.heroimage {
+width: 100%;
+background-image: linear-gradient(rgba(0, 0, 0, 0.384), rgba(0, 0, 0, 0.1)), url(../Assets/Images/hero-shows.jpg);
+min-height: 50vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+
+@include desktop {
+    flex-direction: row;
+}
+
+&__head {
+    color: $white-color1;
+    padding-left: 1rem;
+    padding-top: 1rem;
+
+    @include tablet {
+       font-size: 2rem;
+    }
+
+    @include desktop {
+        margin-right: 0%;
+    }
+}
+
+&__box {
+    @include desktop {
+        margin-right: 0;
+        width: 50%;
+    }
+}
+
+&__text {
+    color: $white-color1;
+    font-size: 1.7rem;
+    font-weight: 700;
+    padding-left: 1rem;  
+    
+    @include tablet {
+        font-size: 4rem;
+    }
+
+    @include desktop {
+        width: 70%;
+        margin-right: 0%;
+        font-size: 3rem;
+    }
+}
+
+iframe {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: none;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    border-radius: 2rem;
+
+    @include tablet {
+        width: 60%;
+    }
+
+    @include desktop {
+        width: 100%;
+        align-items: center;
+        
+        padding-top: 4rem;
+    }
+}
+
+}
+
+
+
+
+
+
+// Footer 
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    color: $white-color1;
+    padding: 0 1.5rem;
+@include tablet {
+    padding-bottom: 2rem;
+}
+
+@include desktop {
+    padding-left: 6rem;
+}
+    &__logos {
+        list-style: none;
+        display: flex;
+        padding-left: 0%;
+
+        @include tablet {
+            padding-left: 1.5rem;
+            padding-top: 0.5rem;
+        }
+    }
+    
+    &_img {
+        padding-right: 1.5rem;
+        height: 1.5rem;
+    }
+}
+
+.footer__heading {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.contactinfo {
+padding-bottom: 2rem;
+
+&__contact {
+    padding-bottom: 1rem;
+
+    @include tablet {
+        padding-right: 1rem;
+    }
+
+    @include desktop {
+        padding-right: 3rem;
+    }
+}
+
+@include tablet {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+@include desktop {
+    
+}
+
+}
+
+.contactinfo__email {
+    text-decoration: none;
+    color: $white-color1;
+}
+
+.contactinfo__name {
+    margin-bottom: 0%;
+}
+
+.contactinfo__tite {
+    margin-top: 0%;
+}
+
+.contactinfo__add {
+    margin-bottom: 0%;
+}
+
+.contactinfo__add2 {
+    margin-top: 0%;
+}
+
+.contactinfo__ad {
+    margin-top: 0%;
+}
+
+.footerlogo {
+    height: 2.5rem;
+    width: 7rem;
+
+    @include tablet {
+        display: flex;
+        order: -1;
+        justify-content: flex-end;
+        justify-content: right;
+        align-self: flex-end;
+        padding-top: 1rem;
+    }
+
+    @include desktop {
+        padding-right: 8rem;
+        height: 4rem;
+        width: 9rem;
+    }
+}
+
+
+
+
+
+//Shows Page
+
+@media screen and (max-width: 819px) {
+    tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1rem;
+    }
+
+    th {
+        text-align: left;
+        margin-bottom: 0.1rem;
+        color: #20050556;
+    }
+    .buy-ticket-button {
+        width: 100%;
+    }
+    .concerts-table {
+        width: 100%;
+        margin-right: 0%;
+    }
+
+    .shows {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .buy-ticket-button {
+        background-color: #323232;
+        color: #FFFFFF;
+        width: 100%;
+        border-radius: 0.25rem;
+        height: 2.5rem;
+        border: none;
+        font-size: 1rem;
+        font-weight: 550;
+        margin-top: 1rem;
+    }
+
+    .concert-date {
+        color: $font-color2;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+    }
+
+    .concert-venue {
+        margin-bottom: 0.5rem;
+    }
+
+    .concert-location {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.shows__header {
+    @include tablet {
+    font-weight: 700;
+    font-size: 2.5rem;
+    }
+}
+
+.shows {
+    @include tablet {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@include desktop {
+    display: flex;
+    justify-content: space-around;
+    
+}
+}
+
+.concerts-table {
+    @include tablet {
+    width: 100%;
+    margin-right: 0%;
+    
+    }
+}
+
+th {
+    @include tablet {
+    text-align: left;
+    margin-bottom: 3rem;
+    color: #20050556;
+    font-size: 1.2rem;
+    }
+    
+}
+
+
+
+tr td {
+    @include tablet {
+    
+    
+    border-bottom: 2px solid #e1e1e1;
+    padding-bottom: 1.5rem;
+    }
+}
+
+
+.buy-ticket-button {
+    @include tablet {
+
+    background-color: #323232;
+    color: #FFFFFF;
+    width: 10rem;
+    border-radius: 0.25rem;
+    height: 2.5rem;
+    border: none;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    }
+}
+
+
+
+.concert-date { 
+    @include tablet {
+    color: $font-color2;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    }
+}
+
+
+
+.concert-venue {
+    @include tablet {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    }
+}
+
+.concert-location {
+    @include tablet {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    }
+}
+
+
+#concerts-container {
+    @include desktop {
+        width: 60%;
+        padding-top: 2rem;
+        
+    }
+}
