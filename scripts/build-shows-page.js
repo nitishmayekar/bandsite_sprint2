@@ -1,87 +1,64 @@
-var concerts = [
-  {
-    DATE: "Mon Sept 06 2021",
-    VENUE: "Roland Lane",
-    LOCATION: "San Francisco, CA"
-  },
-  {
-    DATE: "Tue Sept 21 2021",
-    VENUE: "Pier 3 East",
-    LOCATION: "San Francisco, CA"
-  },
-  {
-    DATE: "Fri Oct 15 2021",
-    VENUE: "View Lounge",
-    LOCATION: "San Francisco, CA"
-  },
-  {
-    DATE: "Sat Nov 06 2021",
-    VENUE: "Hyatt Agency",
-    LOCATION: "San Francisco, CA"
-  },
-  {
-    DATE: "Fri Nov 26 2021",
-    VENUE: "Moscow Center",
-    LOCATION: "San Francisco, CA"
-  },
-  {
-    DATE: "Wed Dec 15 2021",
-    VENUE: "Press Club",
-    LOCATION: "San Francisco, CA"
-  }
-];
 
-var container = document.getElementById('concerts-container');
+const container = document.getElementById('concerts-container');
 
-var table = document.createElement('table');
+const table = document.createElement('table');
 table.classList.add('concerts-table');
 
-var headerRow = document.createElement('tr');
+const headerRow = document.createElement('tr');
 
-var headerDate = document.createElement('th');
+const headerDate = document.createElement('th');
 headerDate.textContent = 'DATE';
 headerRow.appendChild(headerDate);
 
-var headerVenue = document.createElement('th');
+const headerVenue = document.createElement('th');
 headerVenue.textContent = 'VENUE';
 headerRow.appendChild(headerVenue);
 
-var headerLocation = document.createElement('th');
+const headerLocation = document.createElement('th');
 headerLocation.textContent = 'LOCATION';
 headerRow.appendChild(headerLocation);
 
-var headerAction = document.createElement('th');
+const headerAction = document.createElement('th');
 headerAction.textContent = '';
 headerRow.appendChild(headerAction);
 
 table.appendChild(headerRow);
 
-concerts.forEach(function(concert) {
-  var row = document.createElement('tr');
 
-  var dateCell = document.createElement('td');
-  dateCell.textContent = concert.DATE;
-  dateCell.classList.add('concert-date');
-  row.appendChild(dateCell);
+fetch('https://project-1-api.herokuapp.com/showdates?api_key=${result.data.api_key}')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(function(concert) {
+      const row = document.createElement('tr');
 
-  var venueCell = document.createElement('td');
-  venueCell.textContent = concert.VENUE;
-  venueCell.classList.add('concert-venue'); 
-  row.appendChild(venueCell);
+      const dateCell = document.createElement('td');
+      dateCell.textContent = new Date(concert.date).toDateString();
+      dateCell.classList.add('concert-date');
+      row.appendChild(dateCell);
 
-  var locationCell = document.createElement('td');
-  locationCell.textContent = concert.LOCATION;
-  locationCell.classList.add('concert-location'); 
-  row.appendChild(locationCell);
+      const venueCell = document.createElement('td');
+      venueCell.textContent = concert.place;
+      venueCell.classList.add('concert-venue'); 
+      row.appendChild(venueCell);
 
-  var actionCell = document.createElement('td');
-  var buyButton = document.createElement('button');
-  buyButton.textContent = 'BUY TICKETS';
-  buyButton.classList.add('buy-ticket-button');
-  actionCell.appendChild(buyButton);
-  row.appendChild(actionCell);
+      const locationCell = document.createElement('td');
+      locationCell.textContent = concert.location;
+      locationCell.classList.add('concert-location'); 
+      row.appendChild(locationCell);
 
-  table.appendChild(row);
-});
+      const actionCell = document.createElement('td');
+      const buyButton = document.createElement('button');
+      buyButton.textContent = 'BUY TICKETS';
+      buyButton.classList.add('buy-ticket-button');
+      actionCell.appendChild(buyButton);
+      row.appendChild(actionCell);
 
-container.appendChild(table);
+      table.appendChild(row);
+    });
+
+    container.appendChild(table);
+  })
+  .catch(error => {
+    console.log('Error fetching concert data:', error);
+  });
+

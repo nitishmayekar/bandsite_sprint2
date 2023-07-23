@@ -1,4 +1,8 @@
-@import 'partials';
+
+@use 'partials';
+
+
+
 
 body {
     margin: 0%;
@@ -245,6 +249,7 @@ justify-content: center;
         
         flex-direction: row;
         flex-wrap: wrap;
+        
      }
 
      @include desktop {
@@ -260,6 +265,7 @@ justify-content: center;
         height: 14rem;
         width: 15.5rem;
         padding-right: 0.2rem;
+        margin-top: 0%;
        }
 
        @include desktop {
@@ -599,5 +605,11 @@ width: 100%;
 
 .timestamp {
     font-size: 0.9rem;
-    color: #20050556;;
+    color: #20050556;
+    
+}
+
+.name-timestamp-container {
+    display: flex;
+    justify-content: space-between;
 }

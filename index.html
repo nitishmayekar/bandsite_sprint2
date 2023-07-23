@@ -76,16 +76,15 @@
    <input type="text" id="name-input" placeholder="Enter your name" required>
    <label for="comment-input" class="commentz">COMMENT</label>
    <input type="text" id="comment-input" placeholder="Add a new comment" required>
-   <button type="submit" class="commentbtn">COMMENT</button>
+   <!-- <button type="submit" class="commentbtn">COMMENT</button> -->
+   <button type="button" onclick="addComment(event)" class="commentbtn">Add Comment</button>
+
    </form> 
 </div>
   <div id="comments-container"></div>
 
 </div>
 </div>
-
-
-
 
 
 <!-- Footer -->
@@ -129,7 +128,7 @@
 <p class="copyright">Copyright The Bees Knees &copy; 2021 All Rights Reserved</p>
 
 </footer>
-
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./scripts/index-page.js"></script>
 </body>
 </html>

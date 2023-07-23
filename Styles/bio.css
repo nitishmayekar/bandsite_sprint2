@@ -2,6 +2,10 @@
   font-family: "Avenir";
   src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
 }
+@font-face {
+  font-family: "Avenir";
+  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+}
 body {
   margin: 0%;
   padding: 0%;
@@ -242,6 +246,7 @@ body {
     height: 14rem;
     width: 15.5rem;
     padding-right: 0.2rem;
+    margin-top: 0%;
   }
 }
 @media only screen and (min-width: 1180px) {
@@ -604,4 +609,9 @@ body {
 .timestamp {
   font-size: 0.9rem;
   color: rgba(32, 5, 5, 0.337254902);
+}
+
+.name-timestamp-container {
+  display: flex;
+  justify-content: space-between;
 }/*# sourceMappingURL=bio.css.map */
